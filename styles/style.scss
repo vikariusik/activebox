@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$lightcolor: #ffffff;
+$primaryfontfamily: "Raleway", serif;
+
+@mixin font(
+  $fontweight,
+  $fontsize,
+  $lineheight,
+  $color: $lightcolor,
+  $fontfamily: $primaryfontfamily
+) {
+  font-weight: $fontweight;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  font-family: $fontfamily;
+  color: $color;
+}
+
+.container {
+  width: 100%;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+
+  &__logo {
+    margin: auto 0px;
+    width: 184px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(186, 187, 197, 1);
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 31px;
+    row-gap: 88px;
+  }
+}
+
+.btn {
+  display: block;
+  max-width: 370px;
+  width: 100%;
+  background-color: rgba(255, 67, 67, 1);
+  margin: 0 auto;
+  padding: 26px 10px;
+  text-transform: uppercase;
+  @include font(900, 24px, 28px);
+  border: none;
+
+  &:hover {
+    background-color: rgba(231, 20, 20, 1);
+  }
+
+  &:active {
+    box-shadow: 4px 4px 30px 0 rgba(255, 67, 67, 1);
+  }
+}
+
+.nav {
+  display: flex;
+  column-gap: 5px;
+  padding: 10px 0px; 
+
+  &__link {
+    text-decoration: none;
+    min-width: 134px;
+    text-transform: uppercase;
+    @include font(700, 13px, 15px);
+    display: block;
+    padding: 32px 0;
+    border-bottom: 3px solid transparent;
+  }
+
+  &:hover {
+    border-color: red;
+  }
+
+  &:active {
+    border-color: red;
+  }
+}
+
+.banner {
+  background-image: url(../images/bannerBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 230px 0 120px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 43, 73, 0.8);
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    @include font(900, 64px, 75px);
+    margin-bottom: 31px;
+  }
+
+  &__text {
+    text-align: center;
+    @include font(400, 24px, 28px);
+    margin: 0 auto 79px;
+  }
+
+  &__container {
+    z-index: 1;
+    position: relative;
+  }
+}

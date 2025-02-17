@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+}
+.header__logo {
+  margin: auto 0px;
+  width: 184px;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(186, 187, 197);
+}
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 31px;
+       column-gap: 31px;
+  row-gap: 88px;
+}
+
+.btn {
+  display: block;
+  max-width: 370px;
+  width: 100%;
+  background-color: rgb(255, 67, 67);
+  margin: 0 auto;
+  padding: 26px 10px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Raleway", serif;
+  color: #ffffff;
+  border: none;
+}
+.btn:hover {
+  background-color: rgb(231, 20, 20);
+}
+.btn:active {
+  box-shadow: 4px 4px 30px 0 rgb(255, 67, 67);
+}
+
+.nav {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  padding: 10px 0px;
+}
+.nav__link {
+  text-decoration: none;
+  min-width: 134px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  font-family: "Raleway", serif;
+  color: #ffffff;
+  display: block;
+  padding: 32px 0;
+  border-bottom: 3px solid transparent;
+}
+.nav:hover {
+  border-color: red;
+}
+.nav:active {
+  border-color: red;
+}
+
+.banner {
+  background-image: url(../images/bannerBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 230px 0 120px;
+  position: relative;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 43, 73, 0.8);
+}
+.banner__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+  font-family: "Raleway", serif;
+  color: #ffffff;
+  margin-bottom: 31px;
+}
+.banner__text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Raleway", serif;
+  color: #ffffff;
+  margin: 0 auto 79px;
+}
+.banner__container {
+  z-index: 1;
+  position: relative;
+}/*# sourceMappingURL=style.css.map */
