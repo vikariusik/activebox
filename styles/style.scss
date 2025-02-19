@@ -6,9 +6,11 @@
 
 $lightcolor: #ffffff;
 $primaryfontfamily: "Raleway", serif;
+$h3color: #2D3033;
+$primarytextcolor: #6C7279;
 
 @mixin font(
-  $fontweight,
+  $fontweight : 400,
   $fontsize,
   $lineheight,
   $color: $lightcolor,
@@ -103,10 +105,10 @@ $primaryfontfamily: "Raleway", serif;
   background-image: url(../images/bannerBackground.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   padding: 230px 0 120px;
   position: relative;
+  margin-bottom: 116px;
 
   &::after {
     content: "";
@@ -129,10 +131,48 @@ $primaryfontfamily: "Raleway", serif;
     text-align: center;
     @include font(400, 24px, 28px);
     margin: 0 auto 79px;
+    max-width: 1000px;
   }
 
   &__container {
     z-index: 1;
     position: relative;
+  }
+}
+
+.advantages {
+  margin-bottom: 116px;
+
+  &__blocks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 89px;
+      column-gap: 25px;
+  }
+
+  &__block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  &__img {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 51px;
+  }
+
+  &__title {
+    @include font(900, 24px, 28px, $h3color);
+      margin-bottom: 42px;
+      text-transform: uppercase;
+  }
+
+  &__text {
+    @include font(400, 18px, 21px, $primarytextcolor);
+      text-align: center;
   }
 }

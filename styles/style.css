@@ -88,10 +88,10 @@
   background-image: url(../images/bannerBackground.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   padding: 230px 0 120px;
   position: relative;
+  margin-bottom: 116px;
 }
 .banner::after {
   content: "";
@@ -120,8 +120,50 @@
   font-family: "Raleway", serif;
   color: #ffffff;
   margin: 0 auto 79px;
+  max-width: 1000px;
 }
 .banner__container {
   z-index: 1;
   position: relative;
+}
+
+.advantages {
+  margin-bottom: 116px;
+}
+.advantages__blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 89px;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.advantages__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.advantages__img {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 51px;
+}
+.advantages__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Raleway", serif;
+  color: #2D3033;
+  margin-bottom: 42px;
+  text-transform: uppercase;
+}
+.advantages__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "Raleway", serif;
+  color: #6C7279;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
