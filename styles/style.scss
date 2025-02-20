@@ -8,6 +8,7 @@ $lightcolor: #ffffff;
 $primaryfontfamily: "Raleway", serif;
 $h3color: #2d3033;
 $primarytextcolor: #6c7279;
+$red: #FF4343;
 
 @mixin font(
   $fontweight: 400,
@@ -235,3 +236,57 @@ $primarytextcolor: #6c7279;
     }
   }
 }
+
+.team {
+  margin-bottom: 116px;
+
+  &__blocks {
+      display: grid;
+      column-gap: 30px;
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__foto-wrapper {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      margin-bottom: 30px;
+  }
+
+  &__foto-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  &__name {
+    @include font(700, 24px, 28px, $h3color);
+      margin-bottom: 6px;
+  }
+
+  &__job {
+      @include font(400, 18px, 21px, $red);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+  }
+
+  &__text {
+      @include font(400, 18px, 21px, $primarytextcolor);
+      margin-bottom: 38px;
+  }
+
+  &__social {
+      display: flex;
+      column-gap: 6px;
+
+      &-block {
+          width: 39px;
+          height: 39px;
+          overflow: hidden;
+          border: 1px solid #C6CBCD;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+  }
+}
+
