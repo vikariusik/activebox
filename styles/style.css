@@ -158,9 +158,15 @@
   height: 100%;
   background-color: rgba(37, 43, 73, 0.8);
 }
+@media (max-width: 1024px) {
+  .banner {
+    margin-bottom: 60px;
+  }
+}
 @media (max-width: 768px) {
   .banner {
     padding: 100px 0 120px;
+    margin-bottom: 40px;
   }
 }
 .banner__title {
@@ -228,6 +234,16 @@
 .advantages {
   margin-bottom: 116px;
 }
+@media (max-width: 1024px) {
+  .advantages {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .advantages {
+    margin-bottom: 40px;
+  }
+}
 .advantages__blocks {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -238,11 +254,13 @@
 @media (max-width: 1024px) {
   .advantages__blocks {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
   }
 }
 @media (max-width: 768px) {
   .advantages__blocks {
     grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
   }
 }
 .advantages__block {
@@ -297,10 +315,25 @@
 .portfolio {
   margin-bottom: 116px;
 }
+@media (max-width: 1024px) {
+  .portfolio {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio {
+    margin-bottom: 40px;
+  }
+}
 .portfolio__items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2px;
+}
+@media (max-width: 768px) {
+  .portfolio__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .portfolio__item {
   overflow: hidden;
@@ -352,6 +385,11 @@
     color: #ffffff;
   }
 }
+@media (max-width: 768px) {
+  .portfolio__title {
+    margin-bottom: 5px;
+  }
+}
 .portfolio__text {
   font-weight: 400;
   font-size: 18px;
@@ -373,13 +411,23 @@
 .team {
   margin-bottom: 116px;
 }
+@media (max-width: 1024px) {
+  .team {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .team {
+    margin-bottom: 40px;
+  }
+}
 .team__blocks {
   display: grid;
   -moz-column-gap: 30px;
        column-gap: 30px;
   grid-template-columns: repeat(4, 1fr);
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .team__blocks {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 24px;
@@ -410,6 +458,15 @@
   color: #2d3033;
   margin-bottom: 6px;
 }
+@media (max-width: 1024px) {
+  .team__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: "Raleway", serif;
+    color: #2d3033;
+  }
+}
 .team__job {
   font-weight: 400;
   font-size: 18px;
@@ -419,6 +476,15 @@
   text-transform: uppercase;
   margin-bottom: 18px;
 }
+@media (max-width: 1024px) {
+  .team__job {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "Raleway", serif;
+    color: #ff4343;
+  }
+}
 .team__text {
   font-weight: 400;
   font-size: 18px;
@@ -426,6 +492,15 @@
   font-family: "Raleway", serif;
   color: #6c7279;
   margin-bottom: 38px;
+}
+@media (max-width: 1024px) {
+  .team__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "Raleway", serif;
+    color: #6c7279;
+  }
 }
 .team__social {
   display: flex;
@@ -445,6 +520,16 @@
 .slider {
   margin-bottom: 116px;
   padding-bottom: 44px;
+}
+@media (max-width: 1024px) {
+  .slider {
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 768px) {
+  .slider {
+    margin-bottom: 40px;
+  }
 }
 .slider__blocks {
   display: flex;
@@ -550,6 +635,16 @@
   margin-bottom: 116px;
   text-align: center;
 }
+@media (max-width: 1024px) {
+  .download {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .download {
+    margin-bottom: 40px;
+  }
+}
 .download__title {
   font-weight: 500;
   font-size: 30px;
@@ -572,6 +667,16 @@
   background-color: #353c65;
   padding-top: 71px;
 }
+@media (max-width: 1024px) {
+  .footer {
+    padding-top: 41px;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 21px;
+  }
+}
 .footer__top {
   display: grid;
   -moz-column-gap: 30px;
@@ -579,10 +684,16 @@
   margin-bottom: 71px;
   grid-template-columns: repeat(3, 1fr);
 }
+@media (max-width: 1024px) {
+  .footer__top {
+    margin-bottom: 40px;
+  }
+}
 @media (max-width: 768px) {
   .footer__top {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 34px;
+    margin-bottom: 20px;
   }
 }
 .footer__location {

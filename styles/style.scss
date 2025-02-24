@@ -143,7 +143,6 @@ $sliderborder: #7e5d6f;
     }
 
     @media (max-width: 768px) {
-
     }
   }
 
@@ -175,8 +174,13 @@ $sliderborder: #7e5d6f;
     background-color: rgba(37, 43, 73, 0.8);
   }
 
+  @media (max-width: 1024px) {
+    margin-bottom: 60px;
+  }
+
   @media (max-width: 768px) {
     padding: 100px 0 120px;
+    margin-bottom: 40px;
   }
 
   &__title {
@@ -217,6 +221,14 @@ $sliderborder: #7e5d6f;
 .advantages {
   margin-bottom: 116px;
 
+  @media (max-width: 1024px) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
   &__blocks {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -225,10 +237,12 @@ $sliderborder: #7e5d6f;
 
     @media (max-width: 1024px) {
       grid-template-columns: repeat(2, 1fr);
+      row-gap: 50px;
     }
 
     @media (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
+      row-gap: 30px;
     }
   }
 
@@ -264,17 +278,28 @@ $sliderborder: #7e5d6f;
     @media (max-width: 1024px) {
       @include font(400, 14px, 16px, $primarytextcolor);
     }
-
   }
 }
 
 .portfolio {
   margin-bottom: 116px;
 
+  @media (max-width: 1024px) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__item {
@@ -319,6 +344,9 @@ $sliderborder: #7e5d6f;
     @media (max-width: 1024px) {
       @include font(900, 18px, 21px);
     }
+    @media (max-width: 768px) {
+      margin-bottom: 5px;
+    }
   }
 
   &__text {
@@ -334,12 +362,20 @@ $sliderborder: #7e5d6f;
 .team {
   margin-bottom: 116px;
 
+  @media (max-width: 1024px) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
   &__blocks {
     display: grid;
     column-gap: 30px;
     grid-template-columns: repeat(4, 1fr);
 
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (max-width: 1024px) {
       grid-template-columns: repeat(2, 1fr);
       row-gap: 24px;
     }
@@ -365,17 +401,29 @@ $sliderborder: #7e5d6f;
   &__name {
     @include font(700, 24px, 28px, $h3color);
     margin-bottom: 6px;
+
+    @media (max-width: 1024px) {
+      @include font(700, 18px, 21px, $h3color);
+    }
   }
 
   &__job {
     @include font(400, 18px, 21px, $red);
     text-transform: uppercase;
     margin-bottom: 18px;
+
+    @media (max-width: 1024px) {
+      @include font(400, 14px, 16px, $red);
+    }
   }
 
   &__text {
     @include font(400, 18px, 21px, $primarytextcolor);
     margin-bottom: 38px;
+
+    @media (max-width: 1024px) {
+      @include font(400, 14px, 16px, $primarytextcolor);
+    }
   }
 
   &__social {
@@ -397,6 +445,14 @@ $sliderborder: #7e5d6f;
 .slider {
   margin-bottom: 116px;
   padding-bottom: 44px;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
 
   &__blocks {
     display: flex;
@@ -504,6 +560,14 @@ $sliderborder: #7e5d6f;
   margin-bottom: 116px;
   text-align: center;
 
+  @media (max-width: 1024px) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
   &__title {
     @include font(500, 30px, 35px, #000);
     margin-bottom: 22px;
@@ -520,15 +584,28 @@ $sliderborder: #7e5d6f;
   background-color: #353c65;
   padding-top: 71px;
 
+  @media (max-width: 1024px) {
+    padding-top: 41px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 21px;
+  }
+
   &__top {
     display: grid;
     column-gap: 30px;
     margin-bottom: 71px;
     grid-template-columns: repeat(3, 1fr);
 
+    @media (max-width: 1024px) {
+      margin-bottom: 40px;
+    }
+
     @media (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
       row-gap: 34px;
+      margin-bottom: 20px;
     }
   }
 
