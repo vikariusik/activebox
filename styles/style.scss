@@ -7,9 +7,11 @@
 
 $lightcolor: #ffffff;
 $primaryfontfamily: "Raleway", serif;
+$secondaryfontfamily: "Cardo", serif;
 $h3color: #2d3033;
 $primarytextcolor: #6c7279;
 $red: #ff4343;
+$sliderborder: #7e5d6f;
 
 @mixin font(
   $fontweight: 400,
@@ -47,7 +49,7 @@ $red: #ff4343;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #BABBC5;
+    border-bottom: 1px solid #babbc5;
   }
 
   &__container {
@@ -93,13 +95,13 @@ $red: #ff4343;
 
     &:hover {
       color: $lightcolor;
-      border-bottom: 3px solid #BABBC5;
-  }
+      border-bottom: 3px solid #babbc5;
+    }
 
-  &:active {
+    &:active {
       color: $red;
       border-bottom: 3px solid $red;
-  }
+    }
   }
 
   &:hover {
@@ -303,6 +305,112 @@ $red: #ff4343;
   }
 }
 
+.slider {
+  margin-bottom: 116px;
+  padding-bottom: 44px;
+
+  &__blocks {
+    display: flex;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    width: 50%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    background-color: #7e5d6f;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px 10px 10px;
+    row-gap: 24px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    &-title {
+      @include font(400, 36px, 49px, $lightcolor, $secondaryfontfamily);
+      max-width: 471px;
+      width: 100%;
+      font-style: italic;
+    }
+
+    &-autor {
+      @include font(700, 13px, 15px, $lightcolor);
+      max-width: 471px;
+      width: 100%;
+      text-transform: uppercase;
+    }
+  }
+
+  &__linck {
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+  }
+
+  &__next {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid $sliderborder;
+  }
+
+  &__active {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid $sliderborder;
+    background-color: $sliderborder;
+  }
+
+  &.swiper-horizontal > .swiper-pagination-bullets,
+  &.swiper-pagination-bullets.swiper-pagination-horizontal,
+  &.swiper-pagination-custom,
+  &.swiper-pagination-fraction {
+    bottom: 0;
+  }
+
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid $sliderborder;
+    background-color: transparent;
+    opacity: 1;
+    margin: 0 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $sliderborder;
+  }
+
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+  }
+}
+
 .download {
   margin-bottom: 116px;
   text-align: center;
@@ -328,6 +436,11 @@ $red: #ff4343;
     column-gap: 30px;
     margin-bottom: 71px;
     grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 34px;
+    }
   }
 
   &__location {
@@ -338,6 +451,9 @@ $red: #ff4343;
     @include font(700, 18px, 21px, $lightcolor);
     margin-bottom: 29px;
     text-transform: uppercase;
+    @media (max-width: 1024px) {
+      @include font(700, 14px, 16px, $lightcolor);
+    }
   }
 
   &__blocks {
@@ -355,25 +471,40 @@ $red: #ff4343;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 1024px) {
+      width: 33px;
+      height: 33px;
+    }
   }
 
   &__text {
     @include font(400, 18px, 21px, $lightcolor);
+    @media (max-width: 1024px) {
+      @include font(400, 14px, 16px, $lightcolor);
+    }
   }
 
   &__bottom {
     background-color: #2c3154;
-    padding: 24px 0;
+    padding: 14px 0;
 
     &-container {
       max-width: 370px;
       width: 100%;
       padding: 24px 0px;
+
+      @media (max-width: 1024px) {
+        padding: 0 20px;
+      }
     }
 
     &-text {
       @include font(400, 18px, 21px, #808080);
       text-align: center;
+
+      @media (max-width: 1024px) {
+        @include font(400, 14px, 16px, #808080);
+      }
     }
 
     &-end {

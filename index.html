@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link
-      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Active Box</title>
   </head>
@@ -471,6 +475,56 @@
         </div>
     </section>
 
+    <section class="slider swiper">
+      <div class="swiper-wrapper">
+          <div class="slider__blocks swiper-slide">
+              <div class="slider__img"><img class="slider__picture" src="images/s1.png" alt=""></div>
+              <div class="slider__text">
+                  <p class="slider__text-title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                      Donec sed odio dui. Aenean eu leo quam...”</p>
+                  <p class="slider__text-autor">Susan Sims, Interaction Designer at XYZ</p>
+              </div>
+          </div>
+
+          <div class="slider__blocks swiper-slide">
+              <div class="slider__img"><img class="slider__picture" src="images/s1.png" alt=""></div>
+              <div class="slider__text">
+                  <p class="slider__text-title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                      Donec sed odio dui. Aenean eu leo quam...”</p>
+                  <p class="slider__text-autor">Susan Sims, Interaction Designer at XYZ</p>
+              </div>
+          </div>
+
+          <div class="slider__blocks swiper-slide">
+              <div class="slider__img"><img class="slider__picture" src="images/s1.png" alt=""></div>
+              <div class="slider__text">
+                  <p class="slider__text-title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                      Donec sed odio dui. Aenean eu leo quam...”</p>
+                  <p class="slider__text-autor">Susan Sims, Interaction Designer at XYZ</p>
+              </div>
+          </div>
+
+          <div class="slider__blocks swiper-slide">
+              <div class="slider__img"><img class="slider__picture" src="images/s1.png" alt=""></div>
+              <div class="slider__text">
+                  <p class="slider__text-title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                      Donec sed odio dui. Aenean eu leo quam...”</p>
+                  <p class="slider__text-autor">Susan Sims, Interaction Designer at XYZ</p>
+              </div>
+          </div>
+
+          <div class="slider__blocks swiper-slide">
+              <div class="slider__img"><img class="slider__picture" src="images/s1.png" alt=""></div>
+              <div class="slider__text">
+                  <p class="slider__text-title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                      Donec sed odio dui. Aenean eu leo quam...”</p>
+                  <p class="slider__text-autor">Susan Sims, Interaction Designer at XYZ</p>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+
     <section class="download">
         <div class="container">
             <h2 class="download__title">Are You Ready to Start? Download Now For Free!</h2>
@@ -525,5 +579,14 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".slider", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
   </body>
 </html>
