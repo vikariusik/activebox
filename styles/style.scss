@@ -56,6 +56,10 @@ $sliderborder: #7e5d6f;
     display: flex;
     flex-wrap: wrap;
     column-gap: 31px;
+    @media (max-width: 1024px) {
+      max-width: 314px;
+      padding: 0, 20px;
+    }
   }
 }
 
@@ -77,11 +81,35 @@ $sliderborder: #7e5d6f;
   &:active {
     box-shadow: 4px 4px 30px 0 rgba(255, 67, 67, 1);
   }
+
+  @media (max-width: 1024px) {
+    max-width: 314px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 280px;
+  }
 }
 
 .nav {
   display: flex;
   column-gap: 5px;
+
+  &__mobile {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    opacity: 0;
+    position: absolute;
+  }
 
   &__link {
     text-align: center;
@@ -90,7 +118,7 @@ $sliderborder: #7e5d6f;
     text-transform: uppercase;
     @include font(700, 13px, 15px);
     display: block;
-    padding: 32px 0;
+    padding: 36px 0;
     border-bottom: 3px solid transparent;
 
     &:hover {
@@ -102,6 +130,11 @@ $sliderborder: #7e5d6f;
       color: $red;
       border-bottom: 3px solid $red;
     }
+
+    @media (max-width: 1024px) {
+      min-width: 105px;
+    }
+
   }
 
   &:hover {
@@ -160,6 +193,14 @@ $sliderborder: #7e5d6f;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 89px;
     column-gap: 25px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__block {
