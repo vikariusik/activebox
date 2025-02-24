@@ -40,6 +40,7 @@ $sliderborder: #7e5d6f;
   top: 0;
   position: fixed;
   z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
 
   &__logo {
     margin: auto 0px;
@@ -88,11 +89,14 @@ $sliderborder: #7e5d6f;
 
   @media (max-width: 767px) {
     max-width: 280px;
+    max-height: 60px;
+    padding: 16px 10px;
   }
 }
 
 .nav {
   display: flex;
+  justify-content: space-between;
   column-gap: 5px;
 
   &__mobile {
@@ -107,8 +111,10 @@ $sliderborder: #7e5d6f;
   }
 
   @media (max-width: 768px) {
-    opacity: 0;
+    display: flex;
     position: absolute;
+    opacity: 0;
+    flex-direction: column;
   }
 
   &__link {
@@ -133,8 +139,12 @@ $sliderborder: #7e5d6f;
 
     @media (max-width: 1024px) {
       min-width: 105px;
+      @include font(700, 12px, 14px);
     }
 
+    @media (max-width: 768px) {
+
+    }
   }
 
   &:hover {
@@ -165,11 +175,22 @@ $sliderborder: #7e5d6f;
     background-color: rgba(37, 43, 73, 0.8);
   }
 
+  @media (max-width: 768px) {
+    padding: 100px 0 120px;
+  }
+
   &__title {
     text-align: center;
     text-transform: uppercase;
     @include font(900, 64px, 75px);
     margin-bottom: 31px;
+
+    @media (max-width: 1024px) {
+      @include font(900, 48px, 56px);
+    }
+    @media (max-width: 768px) {
+      @include font(900, 36px, 42px);
+    }
   }
 
   &__text {
@@ -177,6 +198,14 @@ $sliderborder: #7e5d6f;
     @include font(400, 24px, 28px);
     margin: 0 auto 79px;
     max-width: 1000px;
+
+    @media (max-width: 1024px) {
+      @include font(400, 18px, 21px);
+    }
+    @media (max-width: 768px) {
+      @include font(400, 14px, 16px);
+      margin-bottom: 50px;
+    }
   }
 
   &__container {
@@ -222,11 +251,20 @@ $sliderborder: #7e5d6f;
     @include font(900, 24px, 28px, $h3color);
     margin-bottom: 42px;
     text-transform: uppercase;
+
+    @media (max-width: 1024px) {
+      @include font(900, 18px, 21px, $h3color);
+    }
   }
 
   &__text {
     @include font(400, 18px, 21px, $primarytextcolor);
     text-align: center;
+
+    @media (max-width: 1024px) {
+      @include font(400, 14px, 16px, $primarytextcolor);
+    }
+
   }
 }
 
@@ -300,6 +338,16 @@ $sliderborder: #7e5d6f;
     display: grid;
     column-gap: 30px;
     grid-template-columns: repeat(4, 1fr);
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 24px;
+    }
   }
 
   &__foto-wrapper {
